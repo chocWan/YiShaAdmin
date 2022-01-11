@@ -1,6 +1,6 @@
 ﻿; (function (window) {
     "use strict";
-
+    // 全局方法，提供数据字典和权限字典
     // 存放数据库里面所有的数据字典，获取字典类型列表或是字典值 例如top.getDataDict('NewsType')或top.getDataDictValue('NewsType' , 1)
     var dataDict = {};
     // 存放当前用户所拥有的权限

@@ -267,6 +267,7 @@
                 }
             });
         },
+        // 截取location参数，http://localhost:5000/OrganizationManage/User/UserForm?id=16508640061130153
         request: function (name) {
             var params = decodeURI(window.location.search);
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -327,6 +328,7 @@
             }
         },
         // Html.Raw()方法会提示语法错误，所以用这个函数包装一下
+        // ys.getJson(@Html.Raw(typeof(NeedEnum).EnumToDictionaryString()))
         getJson: function (value) {
             return value;
         },
@@ -348,6 +350,7 @@
             });
             return value;
         },
+        // 其实就是用逗号分割字符串
         getLastValue: function (str) {
             if (!ys.isNullOrEmpty(str)) {
                 var arr = str.toString().split(',');
@@ -415,6 +418,7 @@
             }
             return value.toString();
         },
+        // ys.openLink(href, '_blank');
         openLink: function (href, target) {
             var a = document.createElement('a')
             if (target) {
@@ -426,6 +430,8 @@
             a.href = href;
             a.click();
         },
+        // bootstrap-treetable中有使用，递归处理
+        // ys.recursion(target.data_obj, id, destArr, options.code, options.parentCode);
         recursion: function (obj, id, destArr, key, parentKey) {
             if (!key) {
                 key = "id";
