@@ -78,9 +78,12 @@
                 loginForm();
             }
         });
+        loginForm();
     });
 
     function loginForm() {
+        $("#userName").val("admin");
+        $("#password").val(123456);
         if ($("#form").validate().form()) {
             var postData = $("#form").getWebControls();
             ys.ajax({
